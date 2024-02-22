@@ -1,0 +1,77 @@
+.contenedor_canales_tv {
+  margin: auto;
+  max-width: 1200px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  text-align: center;
+  width: 90%;
+}
+.contenedor_canales_tv .grids {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+.contenedor_canales_tv .grids .grid {
+  border-radius: 25px;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr;
+  border: solid 1px #1a202638;
+  min-height: 250px;
+}
+.contenedor_canales_tv .grids .grid img {
+  width: 60%;
+  margin: auto;
+}
+.contenedor_canales_tv .grids .grid button {
+  width: 100%;
+  border-radius: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  color: white;
+  font-weight: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #e02611;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.contenedor_canales_tv .grids .grid button:hover {
+  cursor: pointer;
+  background-color: #b82616;
+}
+.contenedor_canales_tv .titulo {
+  font-family: "Roboto", sans-serif;
+  font-size: 27.5px;
+  margin-bottom: 40px;
+}
+
+.dmca_link {
+  font-size: 1rem;
+  color: #3bace9;
+  font-weight: bold;
+}
+.dmca_link:hover {
+  color: #1e96d6;
+}
+
+@media (max-width: 1000px) {
+  .contenedor_canales_tv .grids {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 750px) {
+  .contenedor_canales_tv .grids {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contenedor_canales_tv .grids .grid img {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+@media (max-width: 500px) {
+  .contenedor_canales_tv .grids {
+    grid-template-columns: 1fr;
+  }
+}
