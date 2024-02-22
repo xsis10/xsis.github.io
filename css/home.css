@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: ghostwhite;
+}
+* {
+    text-decoration: none;
+}
+.portada-principal {
+    width: 100%;
+    height: 550px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+/*Degradado de la portada principal*/
+.portada-principal .degradado-portada {
+    background: linear-gradient(0deg, #00000000, #000000);
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+    top: 0px;
+}
+/*Item de la portada principal*/
+.portada-principal .contenedor-item {
+    z-index: 9;
+    max-width: 700px;
+    width: 90%;
+    font-family: "Fredoka One", cursive;
+}
+.portada-principal .contenedor-item .titulo {
+    font-size: 3rem;
+    margin: 0px;
+}
+
+.portada-principal .contenedor-item .descripcion {
+    font-size: 1.4rem;
+    font-family: "Roboto", sans-serif;
+}
+.portada-principal .contenedor-item .boton_reproducir_video {
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+/*canales en vivos*/
+.contenedor_canales_en_vivos {
+    min-height: 100px;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: -210px;
+    box-shadow: 0px 0px 10px rgba(175, 174, 174, 0.2);
+}
+
+/*Icono animado red*/
+.circle {
+    width: 15px;
+    height: 15px;
+    background-color: #e02611;
+    border-radius: 100px;
+}
+
+.ringring {
+    position: relative;
+    border: 3px solid #e02611;
+    -webkit-border-radius: 30px;
+    height: 25px;
+    width: 25px;
+    left: 23px;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0;
+}
+@-webkit-keyframes pulsate {
+    0% {
+        -webkit-transform: scale(0.1, 0.1);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1.2, 1.2);
+        opacity: 0;
+    }
+}
+/*END Icono animado red*/
+
+.contenedor_canales_en_vivos .titulo {
+    font-family: "Fredoka One", cursive;
+    color: #e02611;
+    padding: 20px;
+    font-size: 1.9rem;
+    margin: 0px;
+}
+
+.contenedor_canales_en_vivos .canales_en_vivos {
+}
+.contenedor_canales_en_vivos .canales_en_vivos .contenedor_categoria {
+    background-color: #1a2026;
+    width: 100%;
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: 60px 1fr 100px;
+    cursor: pointer;
+    text-align: left;
+    margin-top: 1px;
+    transition: 0.5s;
+}
+.contenedor_hora_y_pais {
+    position: relative;
+    display: flex;
+    align-items: center;
+    left: 10px;
+    justify-content: center;
+}
+
+.contenedor_hora_y_pais img {
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.contenedor_hora_y_pais .hora {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+
+    font-family: "Roboto", sans-serif;
+}
+.canales {
+    background-color: white;
+    display: none;
+    width: 100%;
+}
+.canales .canal {
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 20px;
+    display: flex;
+    border-bottom: 1px rgba(59, 59, 59, 0.24) solid;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.canales .canal:hover {
+    background-color: rgba(2, 1, 1, 0.055);
+}
+.canales .canal .nombre {
+    font-size: 1rem;
+    color: #e02611;
+    font-family: "Roboto", sans-serif;
+}
+.canales .canal .icono svg {
+    height: 20px;
+    color: #e02611;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+.contenedor_canales_en_vivos .canales_en_vivos .contenedor_categoria:hover {
+    background-color: #e02611;
+}
+.activo_contenedor_categoria {
+    background-color: #e02611 !important;
+}
+.contenedor_canales_en_vivos .canales_en_vivos .categoria .horario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: "Roboto", sans-serif;
+}
+
+.contenedor_canales_en_vivos .canales_en_vivos .categoria .horario svg {
+    height: 30px;
+}
+
+.contenedor_canales_en_vivos .canales_en_vivos .categoria .content-texto {
+    display: inline-flex;
+    padding-left: 25px;
+    align-items: center;
+}
+.contenedor_canales_en_vivos .canales_en_vivos .categoria .content-texto span {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.contenedor_canales_en_vivos
+    .canales_en_vivos
+    .categoria
+    .content-texto
+    .titulo {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-family: "Roboto", sans-serif;
+}
+/*END canales en vivos*/
+
+/*video*/
+.contenedor-video {
+    position: relative;
+    text-align: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    margin-top: -400px;
+    z-index: 9;
+    margin-bottom: 50px;
+}
+.contenedor-video .titulo {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: 2rem;
+    font-family: "Fredoka One", cursive;
+}
+.contenedor-video .video {
+    position: relative;
+    background-color: rgb(31, 31, 31);
+    text-align: center;
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .portada-principal .contenedor-item .titulo {
+        font-size: 2rem;
+        margin: 0px;
+    }
+
+    .portada-principal .contenedor-item .descripcion {
+        font-size: 1rem;
+        font-family: "Roboto", sans-serif;
+    }
+    .contenedor_canales_en_vivos .titulo {
+        font-size: 1.2rem;
+    }
+    .portada-principal {
+        height: 500px;
+    }
+
+    .contenedor_canales_en_vivos
+        .canales_en_vivos
+        .categoria
+        .content-texto
+        .titulo {
+        font-size: 1rem;
+    }
+}
