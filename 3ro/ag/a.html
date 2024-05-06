@@ -1,0 +1,20 @@
+</head>
+<body>
+    <div id="json-content"></div> <!-- Donde mostraremos el JSON -->
+
+    <script>
+        fetch('https://futbollibre.pe/agenda.json') // URL del JSON
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error al cargar el JSON');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Mostrar el JSON formateado
+                document.getElementById('json-content').innerText = JSON.stringify(data, null, 2);
+            })
+            .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
